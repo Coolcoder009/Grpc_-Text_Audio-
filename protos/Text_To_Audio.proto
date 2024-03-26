@@ -1,0 +1,13 @@
+syntax="proto3";
+
+message Sentence{
+    string sent=1;
+}
+
+message Audio{
+    bytes audio=1;
+}
+
+service TextToAudio {
+    rpc ConvertTextToAudio(Sentence) returns (Audio) {}
+}
